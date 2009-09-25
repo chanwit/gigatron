@@ -12,6 +12,7 @@ repositories {
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.4'
     compile(
-          [group: 'asm',         name: 'asm-all',     version: '3.1']
+          [group: 'asm',    name: 'asm-all',    version: '3.1'],
+          [group: 'junit',  name: 'junit',      version: '3.8.2']
     )    
 }
