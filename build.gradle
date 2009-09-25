@@ -1,6 +1,8 @@
 usePlugin 'groovy'
 usePlugin 'eclipse'
+usePlugin 'maven'
 
+group = 'org.codehaus.gigatron'
 archivesBaseName = 'gigatron'
 version = 0.1
 
@@ -12,7 +14,13 @@ repositories {
 dependencies {
     groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.4'
     compile(
-          [group: 'asm',    name: 'asm-all',    version: '3.1'],
-          [group: 'junit',  name: 'junit',      version: '3.8.2']
+        [group: 'asm',    name: 'asm-all',    version: '3.1'],
+        [group: 'junit',  name: 'junit',      version: '3.8.2']
     )    
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file://F:/My Dropbox/Public/maven")
+    }
 }
