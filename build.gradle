@@ -1,0 +1,17 @@
+usePlugin 'groovy'
+usePlugin 'eclipse'
+
+archivesBaseName = 'gigatron'
+version = 0.1
+
+repositories {
+    mavenCentral()
+    mavenRepo urls: ['http://repository.codehaus.org', 'http://download.java.net/maven/2']
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.4'
+    compile(
+          [group: 'asm',         name: 'asm-all',     version: '3.1']
+    )    
+}
