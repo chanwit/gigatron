@@ -21,6 +21,6 @@ dependencies {
 
 uploadArchives {
     repositories.mavenDeployer {
-        repository(url: "file://F:/My Dropbox/Public/maven")
+        repository(url: "${System.getenv('DROPBOX_HOME')}/Public/maven")
     }
 }
